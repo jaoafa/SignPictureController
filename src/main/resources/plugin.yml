@@ -1,0 +1,14 @@
+name: SignPictureController
+main: com.jaoafa.SignPictureController.SignPictureController
+version: 0.0.1
+description: Mod:"SignPicture" Controller
+database: true
+author: mine_book000
+softdepend: [PermissionsEx, WorldEdit]
+website: https://jaoafa.com/
+commands:
+   spc:
+      description: SignPictureController
+      usage: /<command>
+      permission: spc.spc
+      permission-message: You do not have permission to perform this command.
