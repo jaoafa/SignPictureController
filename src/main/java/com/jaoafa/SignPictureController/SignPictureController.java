@@ -7,6 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.jaoafa.SignPictureController.Command.SPC;
+import com.jaoafa.SignPictureController.Event.OnSignChangeEvent;
 
 
 public class SignPictureController extends JavaPlugin {
@@ -40,6 +41,9 @@ public class SignPictureController extends JavaPlugin {
 
 		//CommandExecutor
 		getCommand("spc").setExecutor(new SPC(this));
+
+		//EventHandler
+		getServer().getPluginManager().registerEvents(new OnSignChangeEvent(this), this);
 	}
 	/**
 	 * 初期設定
